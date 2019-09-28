@@ -11,7 +11,7 @@ using IOC;
 namespace BLL
 {
     /// <summary>
-    /// 
+    /// 1
     /// </summary>
     public class AttributeTypeBLL : IAttributeTypeBLL
     {

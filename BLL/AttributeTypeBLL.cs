@@ -19,7 +19,7 @@ namespace BLL
 
         public int AttributeNameAdd(AttributeNameModel at)
         {
-            return iat.AttributeNameAdd(at);
+            return iat.AttributeNameAdd(at);//2
         }
 
         public int AttributeNameDelete(AttributeNameModel at)

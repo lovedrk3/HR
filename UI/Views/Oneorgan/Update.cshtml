@@ -1,0 +1,86 @@
+﻿
+@model IEnumerable<Model.OneorganModel>
+@{
+    Layout = null;
+}
+@using Model;
+
+@using System.Data;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    <link href="~/hr/css/table.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("Update", "Oneorgan", FormMethod.Post))
+    {
+        <table width="100%">
+            <tr>
+                <td>
+                    <font color="black">
+                        您正在做的业务是：人力资源--客户化设置--人力资源档案管理设置--I级机构设置--I级机构变更
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <input type="submit" value="提交" class="BUTTON_STYLE1" />
+                    <input type="button" value="返回" class="BUTTON_STYLE1"
+                           onclick="history.back();">
+                </td>
+            </tr>
+        </table>
+
+            <table width="100%" border="1" cellpadding=0 cellspacing=1
+                   bordercolorlight=#848284 bordercolordark=#eeeeee
+                   class="TABLE_STYLE1 ">
+                <input type="hidden" name="cffk.ffkId" value="755" />
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td width="19%" class="TD_STYLE1">
+                            I级机构编号
+                        </td>
+                        <td width="81%" class="TD_STYLE2">
+                            <input type="text" name="cffk.firstKindId" value=" @Html.DisplayFor(modelItem => item.Oid)"
+                                   readonly="readonly" class="INPUT_STYLE1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TD_STYLE1">
+                            I级机构名称
+                        </td>
+                        <td class="TD_STYLE2">
+                            <input type="text" name="cffk.firstKindName" value=" @Html.DisplayFor(modelItem => item.OName)"
+                                   readonly="readonly" class="INPUT_STYLE1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TD_STYLE1">
+                            薪酬发放责任人编号（多个编号之间请用"半角逗号"加"一个空格"隔开，如", "）
+                        </td>
+                        <td class="TD_STYLE2">
+                            <textarea name="cffk.firstKindSalaryId" class="TEXTAREA_STYLE1">
+                                @Html.DisplayFor(modelItem => item.Pid)
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TD_STYLE1">
+                            销售责任人编号（多个编号之间请用"半角逗号"加"一个空格"隔开，如", "）
+                        </td>
+                        <td class="TD_STYLE2">
+                            <textarea name="cffk.firstKindSaleId" class="TEXTAREA_STYLE1">
+                                @Html.DisplayFor(modelItem => item.SID)
+                            </textarea>
+                        </td>
+                    </tr>
+                }
+            </table>
+    }
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/hr/css/table.css" rel="stylesheet" />
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td>
+                <font color="black">
+                    您正在做的业务是：人力资源--客户化设置--人力资源档案管理设置--III级机构设置
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                @Html.ActionLink("添加", "Add")
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="1" cellpadding=0 cellspacing=1
+           bordercolorlight=#848284 bordercolordark=#eeeeee
+           class="TABLE_STYLE1">
+        <tr>
+            <td width="14%" class="TD_STYLE1">
+                I级机构名称
+            </td>
+            <td width="14%" class="TD_STYLE1">
+                II级机构名称
+            </td>
+            <td width="14%" class="TD_STYLE1">
+                II级机构编号
+            </td>
+            <td width="14%" class="TD_STYLE1">
+                III级机构名称
+            </td>
+            <td width="17%" class="TD_STYLE1">
+                销售责任人编号
+            </td>
+            <td width="17%" class="TD_STYLE1">
+                是否为零售店
+            </td>
+            <td width="5%" class="TD_STYLE1">
+                变更
+            </td>
+            <td width="5%" class="TD_STYLE1">
+                删除
+            </td>
+        </tr>
+        @foreach (var item in ViewBag.l)
+        {
+            <tr>
+                <td class="TD_STYLE2">
+                    @item["OName"]
+                </td>
+                <td class="TD_STYLE2">
+                    @item["TName"]
+                </td>
+                <td class="TD_STYLE2">
+                    @item["Tid"]
+                </td>
+                <td class="TD_STYLE2">
+                    @item["ThName"]
+                </td>
+                <td class="TD_STYLE2">
+                    @item["Sid"]
+                </td>
+                @if (int.Parse(@item["yesno"]) == 1)
+                {
+                    <td class="TD_STYLE2">
+                        是
+                    </td>
+                }
+                else
+                {
+                    <td class="TD_STYLE2">
+                        否
+                    </td>
+                }
+
+                <td class="TD_STYLE2">
+                    <a href="/Treeorgan/Update/@item["Thid"]">修改</a>
+                </td>
+                <td class="TD_STYLE2">
+                    <a href="/Treeorgan/Del/@item["Thid"]" onclick="return confirm('是否删除')">删除</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

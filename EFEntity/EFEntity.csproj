@@ -53,8 +53,13 @@
   <ItemGroup>
     <Compile Include="AttributeName.cs" />
     <Compile Include="AttributeType.cs" />
+    <Compile Include="CompensationProgram.cs" />
+    <Compile Include="CompensationTandards.cs" />
     <Compile Include="Config\AttributeNameConfig.cs" />
     <Compile Include="Config\AttributeTypeConfig.cs" />
+    <Compile Include="Config\CompensationProgramConfig.cs" />
+    <Compile Include="Config\CompensationTandardsConfig.cs" />
+    <Compile Include="Config\CpsssConfig.cs" />
     <Compile Include="Config\OneorganConfig.cs" />
     <Compile Include="Config\PostClassifyConfig.cs" />
     <Compile Include="Config\PostConfig.cs" />
@@ -63,6 +68,7 @@
     <Compile Include="Config\TreeorganConfig.cs" />
     <Compile Include="Config\TwoOrganConfig.cs" />
     <Compile Include="Config\UsersConfig.cs" />
+    <Compile Include="Cpsss.cs" />
     <Compile Include="MyDbContext.cs" />
     <Compile Include="Oneorgan.cs" />
     <Compile Include="Post.cs" />

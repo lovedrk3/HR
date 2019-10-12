@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttributeTypeBLL.cs" />
+    <Compile Include="CompensationProgramBLL.cs" />
+    <Compile Include="CompensationTandardsBLL.cs" />
+    <Compile Include="CpsssBLL.cs" />
     <Compile Include="OneorganBLL.cs" />
     <Compile Include="PostBLL.cs" />
     <Compile Include="PostClassifyBLL.cs" />

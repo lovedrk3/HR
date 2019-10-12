@@ -30,38 +30,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.5.8.11\lib\net45\CommonServiceLocator.dll</HintPath>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Model.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Unity.Abstractions">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.5.8.11\lib\net45\Unity.Abstractions.dll</HintPath>
+    <Reference Include="Unity.Abstractions, Version=3.3.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unity.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Configuration">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.Configuration.5.2.5\lib\net45\Unity.Configuration.dll</HintPath>
+    <Reference Include="Unity.Configuration, Version=5.2.5.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unity.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Container">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.5.8.11\lib\net45\Unity.Container.dll</HintPath>
+    <Reference Include="Unity.Container, Version=5.8.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unity.Container.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Interception">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.5.8.11\lib\net45\Unity.Interception.dll</HintPath>
+    <Reference Include="Unity.Interception, Version=5.5.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unity.Interception.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Interception.Configuration">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.5.8.11\lib\net45\Unity.Interception.Configuration.dll</HintPath>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unity.Interception.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RegistrationByConvention">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.5.8.11\lib\net45\Unity.RegistrationByConvention.dll</HintPath>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.9.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ServiceLocation">
-      <HintPath>C:\Users\Administrator\Desktop\蔡子熠\Y2\Unity\Unity.5.8.11\lib\net45\Unity.ServiceLocation.dll</HintPath>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unity.ServiceLocation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -69,9 +85,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{e2c2202a-a26f-4590-9468-053b77c43f87}</Project>
       <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFEntity\EFEntity.csproj">
+      <Project>{c7e3041c-b266-4ab7-a418-3b488c64a040}</Project>
+      <Name>EFEntity</Name>
     </ProjectReference>
     <ProjectReference Include="..\IBLL\IBLL.csproj">
       <Project>{52a83720-52ff-4419-b0ee-e1830f6e2ba9}</Project>
@@ -80,10 +103,6 @@
     <ProjectReference Include="..\IDAO\IDAO.csproj">
       <Project>{f33abc98-782e-41ee-89b3-02686044a185}</Project>
       <Name>IDAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{6edc7569-ad4b-4e03-9fd3-f450a0580dc3}</Project>
-      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

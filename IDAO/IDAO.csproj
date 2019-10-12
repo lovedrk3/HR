@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
@@ -41,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAttributeTypeDAO.cs" />
+    <Compile Include="ICompensationProgramDAO.cs" />
+    <Compile Include="ICompensationTandardsDAO.cs" />
+    <Compile Include="ICpsssDAO.cs" />
     <Compile Include="IOneorganDAO.cs" />
     <Compile Include="IPostClassifyDAO.cs" />
     <Compile Include="IPostDAO.cs" />

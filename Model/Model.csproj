@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="AttributeNameModel.cs" />
     <Compile Include="AttributeTypeModel.cs" />
+    <Compile Include="CompensationProgramModel.cs" />
+    <Compile Include="CompensationTandardsModel.cs" />
+    <Compile Include="CpsssModel.cs" />
     <Compile Include="KeyAttribute.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="OneorganModel.cs" />

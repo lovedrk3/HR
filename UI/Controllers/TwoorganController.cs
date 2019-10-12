@@ -77,7 +77,7 @@ namespace UI.Controllers
             TwoorganModel om = new TwoorganModel() { Oid= int.Parse(Request["cfsk.firstKindId"]) ,TName=TName,Pid=Pid,Sid=Sid};
             int result = sb.StudentAdd(om);
 
-            if (result > 0)
+            if (result > 0) 
             {
                 return Content("<script>alert('添加成功');window.location.href='../Twoorgan/Index';</script>");
             }

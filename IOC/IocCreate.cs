@@ -174,5 +174,69 @@ namespace IOC
             return ioc.Resolve<IPostClassifyBLL>("PostClassifyBLL");
         }
         #endregion
+        #region CompensationTandards
+        public static ICompensationTandardsDAO CreateCompensationTandardsDAL()
+        {
+            UnityContainer ioc = new UnityContainer();
+            ioc.RegisterType<ICompensationTandardsDAO, CompensationTandardsDAO>();
+            return ioc.Resolve<ICompensationTandardsDAO>();
+        }
+
+
+        public static ICompensationTandardsBLL CreateCompensationTandardsBLL()
+        {
+            UnityContainer ioc = new UnityContainer();
+            ExeConfigurationFileMap ef = new ExeConfigurationFileMap();
+            ef.ExeConfigFilename = @"D:\Visual Studio 2015\MVC\HR\UI\Unity.config";
+            Configuration cf = ConfigurationManager.OpenMappedExeConfiguration(ef, ConfigurationUserLevel.None);
+            UnityConfigurationSection cs = (UnityConfigurationSection)cf.GetSection("unity");
+            ioc.LoadConfiguration(cs, "containerTwo");
+            return ioc.Resolve<ICompensationTandardsBLL>("CompensationTandardsBLL");
+        }
+        #endregion
+      
+        #region CompensationProgram
+        public static ICompensationProgramDAO CreateCompensationProgramDAL()
+        {
+            UnityContainer ioc = new UnityContainer();
+            ioc.RegisterType<ICompensationProgramDAO, CompensationProgramDAO>();
+            return ioc.Resolve<ICompensationProgramDAO>();
+        }
+
+
+        public static ICompensationProgramBLL CreateCompensationProgramBLL()
+        {
+            UnityContainer ioc = new UnityContainer();
+            ExeConfigurationFileMap ef = new ExeConfigurationFileMap();
+            ef.ExeConfigFilename = @"D:\Visual Studio 2015\MVC\HR\UI\Unity.config";
+            Configuration cf = ConfigurationManager.OpenMappedExeConfiguration(ef, ConfigurationUserLevel.None);
+            UnityConfigurationSection cs = (UnityConfigurationSection)cf.GetSection("unity");
+            ioc.LoadConfiguration(cs, "containerTwo");
+            return ioc.Resolve<ICompensationProgramBLL>("CompensationProgramBLL");
+        }
+        #endregion
+
+
+
+        #region CompensationProgram
+        public static ICpsssDAO CreateCpsssDAL()
+        {
+            UnityContainer ioc = new UnityContainer();
+            ioc.RegisterType<ICpsssDAO, CpsssDAO>();
+            return ioc.Resolve<ICpsssDAO>();
+        }
+
+
+        public static ICpsssBLL CreateCpsssBLL()
+        {
+            UnityContainer ioc = new UnityContainer();
+            ExeConfigurationFileMap ef = new ExeConfigurationFileMap();
+            ef.ExeConfigFilename = @"D:\Visual Studio 2015\MVC\HR\UI\Unity.config";
+            Configuration cf = ConfigurationManager.OpenMappedExeConfiguration(ef, ConfigurationUserLevel.None);
+            UnityConfigurationSection cs = (UnityConfigurationSection)cf.GetSection("unity");
+            ioc.LoadConfiguration(cs, "containerTwo");
+            return ioc.Resolve<ICpsssBLL>("CpsssBLL");
+        }
+        #endregion
     }
 }

@@ -13,7 +13,7 @@ namespace DAO
 {
   public  class DaoBase<T> where T : class
     {
-        // MyDbContext db = new MyDbContext();
+        MyDbContext db = new MyDbContext();
         public static void WriteLog(Exception ex)
         {
             using (StreamWriter sw = new StreamWriter("错误日志.txt", true))
@@ -115,6 +115,20 @@ namespace DAO
                 //WriteLog(ex);
             }
             return list;
-        } 
+        }
+
+        public List<T> FenYe<K>(Expression<Func<T, K>> order, Expression<Func<T, bool>> where, int currentPage, int PageSize, out int rows)
+        {
+
+            var result4 = db.Set<T>()
+                .AsNoTracking()
+                .OrderBy(order);
+            rows = result4.Count();//总行数
+            var data = result4.Where(where)
+                 .Skip((currentPage - 1) * PageSize)//忽略多少条数
+                 .Take(PageSize)//取多少条数
+                 .ToList();
+            return data;
+        }
     }
 }

@@ -46,6 +46,7 @@ namespace UI.Controllers
                 foreach (UsersModel item in list)
                 {
                     Session["uName"] = item.uName;
+                   
                 }
                 return Content("<script>alert('登录成功');window.location.href='Index'</script>");
             }

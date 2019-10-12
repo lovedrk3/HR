@@ -10,7 +10,7 @@ namespace EFEntity
 {
     public class MyDbContext:DbContext
     {
-        public MyDbContext() : base("Data Source=.;Initial Catalog=HRDB;Integrated Security=True")
+        public MyDbContext() : base("Data Source=.;Initial Catalog=aoyu;Integrated Security=True")
         {
            
         }
@@ -32,5 +32,10 @@ namespace EFEntity
         public DbSet<Post> Post { get; set; }
         
         public DbSet<PostClassify> PostClassify { get; set; }
+
+        //薪酬项目
+        public DbSet<CompensationTandards> CompensationTandards { get; set; }
+
+        public DbSet<CompensationProgram> CompensationProgram { get; set; }
     }
 }

@@ -30,13 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\T7\ConsoleApplication1\ConsoleApplication1\bin\Debug\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\Desktop\HR\HR\EFEntity\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\T7\ConsoleApplication1\ConsoleApplication1\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\..\Desktop\HR\HR\EFEntity\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttributeTypeDAO.cs" />
+    <Compile Include="CompensationProgramDAO.cs" />
+    <Compile Include="CpsssDAO.cs" />
     <Compile Include="DaoBase.cs" />
+    <Compile Include="CompensationTandardsDAO.cs" />
     <Compile Include="OneorganDAO.cs" />
     <Compile Include="PostClassifyDAO.cs" />
     <Compile Include="PostDAO.cs" />

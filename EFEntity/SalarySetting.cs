@@ -10,5 +10,7 @@ namespace EFEntity
     {
         public int SID { get; set; }
         public string SName { get; set; }
+
+
     }
 }

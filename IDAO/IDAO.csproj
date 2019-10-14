@@ -47,6 +47,7 @@
     <Compile Include="IPostClassifyDAO.cs" />
     <Compile Include="IPostDAO.cs" />
     <Compile Include="ISalarySettingDAO.cs" />
+    <Compile Include="Isalary_grantDAO.cs" />
     <Compile Include="ITreeorganDAO.cs" />
     <Compile Include="ITwoorganDAO.cs" />
     <Compile Include="IUsersDAO.cs" />

@@ -68,7 +68,7 @@ namespace DAO
                 .AsNoTracking()
                 .OrderBy(e => e.Ctid);
             
-            rows = result4.Count();//总行数
+            
             var data = result4
                 .Where(e=>e.CtState==1)
                  .Skip((currentPage - 1) * PageSize)//忽略多少条数
@@ -92,6 +92,7 @@ namespace DAO
                 list.Add(pm);
 
             }
+            rows = result4.Count();//总行数
             return list;
 
         }
@@ -129,7 +130,7 @@ namespace DAO
                 list.Add(pm);
 
             }
-            rows = list.Count();//总行数
+            rows = data.Count();//总行数
             return list;
         }
 
@@ -167,7 +168,7 @@ namespace DAO
                 list.Add(pm);
 
             }
-            rows = result4.Count();
+            rows = data.Count();
             return list;
         }
 
